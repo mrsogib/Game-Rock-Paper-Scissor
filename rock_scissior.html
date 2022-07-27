@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game!Rock-Paper-Scissor</title>
+</head>
+
+<body>
+    <div background="white" align="center" class="container">
+        <hr>
+        <p><b>1</b> for <b>Rock</b> <br> <b>2</b> for <b>Paper</b> <br> <b>3</b> for <b>Scissor</b> <br> </p>
+        <hr>
+        <!-- <button onclick="myFunction()">Start Game</button> -->
+        <hr>
+        <script>
+            // function myFunction() {
+                //
+                var num = prompt("Enter a Digit Between 1 to 3:");
+                y = parseInt(num);
+                document.write("You : " + y + "<br>");
+                //
+                if (y > 3 || y < 1) {
+                    document.write("Enter a Digit Between 1 to 3..!<br>");
+                    document.body.style.backgroundColor = "red";
+                }
+                else {
+                    //
+                    var randm = Math.random();
+                    x = Math.ceil(randm * 3);
+                    document.write("Robot : " + x + "<br>");
+                    //
+                    if (x === y) {
+                        document.write("Draw!" + "<br>");
+                        document.body.style.backgroundColor = "grey";
+                    }
+                    else if ((x === 1 && y == 2) || (x === 2 && y == 3) || (x === 3 && y == 1)) {
+                        document.write("Bingo! You Won!!" + "<br>");
+                        document.body.style.backgroundColor = "green";
+                    }
+                    else {
+                        document.write("You Lose..." + "<br>");
+                        document.body.style.backgroundColor = "orange";
+                    }
+                }
+            // }
+        </script>
+        <hr>
+    </div>
+</body>
+
+</html>
